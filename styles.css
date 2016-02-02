@@ -1,43 +1,43 @@
 body {
   background-color:black;
+  clear: both;
   color: white;
   float:left;
-  clear: both;
   width:100%;
 }
 button {
+  font-size:1.2em;
   height:100px;
   width:150px;
-  font-size:1.2em;
 }
 h1 {
 
 }
 section {
-  width:960px;
-  height:480px;
-  margin:auto;
-  float:none;
-  padding:0;
   border: 2px solid red;
   clear: right;
+  float:none;
+  height:480px;
+  margin:auto;
+  padding:0;
+  width:960px;
+  
 }
 section .block {
-  width:80px;
+  background-color:black;
+  float:left;
   height:80px;
   margin:0;
   padding:0;
-  float:left;
-  background-color:black;
-  /*margin-top: -5px;*/
   position:relative;
+  width:80px;
 }
 table {
-  width:960px;
+  border: 2px solid white;
   height:480px;
   margin:auto;
   padding:0;
-  border: 2px solid white;
+  width:960px;
 }
 table .block {
 
