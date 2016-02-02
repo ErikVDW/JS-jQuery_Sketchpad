@@ -48,9 +48,9 @@ function main(){
   // Determine dimensions
 
   var sideLength = prompt("How many squares would you like per side on the grid?");
-  if (sideLength > 30) {sideLength = 30} // Set maximum for performance reasons
+  if (sideLength > 30) {sideLength = 30} // Set maximum for performance reasons (900 squares total)
   var dimension = 960/sideLength;
-  var reqArea = Math.pow(sideLength, 2);
+  var reqBlocks = Math.pow(sideLength, 2);
   //var current = $('.block').length;
   
   // Divs
@@ -68,5 +68,4 @@ function main(){
 
 $(function(){
   $('button').click(main);
-  changeColor();
 });
