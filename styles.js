@@ -1,35 +1,76 @@
-function changeColor () {
+// TODO: Compartmentalize further.
+
+// Constants
+var BLOCK_DIV = '<div class = "block"></div>';
+var TABLE_BLOCK = '<td class="block"></td>'
+
+// Used by div method
+
+function sectionAdd (reqArea) { // 
+  var i = 0;
+  while (i < reqArea) {
+    $('section').append(BLOCK_DIV);
+    i ++;
+  }
+}
+
+// Used by table method
+
+function tableAdd (sideLength) {
+  var i = 0;
+  while (i < sideLength) {
+    console.log("Check");
+    $('tbody').append("<tr></tr>");
+    i ++;
+  }
+  var i = 0;
+  while (i < sideLength) {
+    console.log("Check");
+    $('tr').append(BLOCK_DIV);
+    i ++;
+  }
+  //Determine number of rows and happens to be number of blocks req
+
+  //Add those rows
+  // Add same number of blocks as there are rows to each row
+
+}
+
+// Used by both
+
+function changeColor () { // Changes the color on mouseover
   $('.block').mouseover(function(){
     $(this).css("background-color", "white");
   });
 }
-function sectionAdd (reqArea, blockDiv) {
-  var i = 0;
-  while (i < reqArea) {
-    $('section').append(blockDiv);
-    i ++;
-  }
-}
-function tableAdd (reqArea, blockDiv) {
-  //Determine number of rows and happens to be number of blocks req
-  //Add those rows
-  //
+
+// function lengthPrompt() {
+
+// }
+
+function main(){
+  // Determine dimensions
+
+  var sideLength = prompt("How many squares would you like per side on the grid?");
+  if (sideLength > 30) {sideLength = 30} // Set maximum for performance reasons
+  var dimension = 960/sideLength;
+  var reqArea = Math.pow(sideLength, 2);
+  //var current = $('.block').length;
+  
+
+  // Divs
+
+  $('.block').remove();
+  sectionAdd(reqArea);
+  $('.block').css({"width" : dimension, "height": dimension});
+
+  $('tr').remove();
+  tableAdd(sideLength);
+
+  changeColor(); 
 }
 
-$(document).ready(function(){
-  $('button').click(function(){
-    var sideLength = prompt("How many squares would you like per side on the grid?");
-    if (sideLength > 30) {sideLength = 30}
-    var dimension = 960/sideLength;
-    var reqArea = Math.pow(sideLength, 2);
-    //var current = $('.block').length;
-    var blockDiv = '<div class = "block"></div>';
-    $('.block').remove();
-    sectionAdd(reqArea, blockDiv);
-    tableAdd ();
-    $('.block').css({"width" : dimension, "height": dimension});
-    $('.block').css("background-color", "black");
-    changeColor();
-  });
+$(function(){
+  $('button').click(main);
   changeColor();
 });
