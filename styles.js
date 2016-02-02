@@ -18,21 +18,20 @@ function sectionAdd (reqArea) { //
 
 function tableAdd (sideLength) {
   var i = 0;
+  
   while (i < sideLength) {
     console.log("Check");
     $('tbody').append("<tr></tr>");
     i ++;
   }
+  
   var i = 0;
+  
   while (i < sideLength) {
     console.log("Check");
     $('tr').append(BLOCK_DIV);
     i ++;
   }
-  //Determine number of rows and happens to be number of blocks req
-
-  //Add those rows
-  // Add same number of blocks as there are rows to each row
 
 }
 
@@ -44,11 +43,8 @@ function changeColor () { // Changes the color on mouseover
   });
 }
 
-// function lengthPrompt() {
-
-// }
-
 function main(){
+  
   // Determine dimensions
 
   var sideLength = prompt("How many squares would you like per side on the grid?");
@@ -57,7 +53,6 @@ function main(){
   var reqArea = Math.pow(sideLength, 2);
   //var current = $('.block').length;
   
-
   // Divs
 
   $('.block').remove();
@@ -67,7 +62,8 @@ function main(){
   $('tr').remove();
   tableAdd(sideLength);
 
-  changeColor(); 
+  changeColor();
+
 }
 
 $(function(){
