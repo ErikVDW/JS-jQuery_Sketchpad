@@ -61,11 +61,11 @@ function main(){
 
   $('tr').remove();
   tableAdd(sideLength);
-
   changeColor();
 
 }
 
 $(function(){
   $('button').click(main);
+  changeColor();
 });

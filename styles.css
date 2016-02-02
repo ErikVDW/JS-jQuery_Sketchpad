@@ -17,10 +17,10 @@ section {
   border: 2px solid red;
   clear: right;
   float:none;
-  height:480px;
+  height:800px;
   margin:auto;
   padding:0;
-  width:960px;
+  width:800px;
   
 }
 section .block {
@@ -34,10 +34,10 @@ section .block {
 }
 table {
   border: 2px solid white;
-  height:480px;
+  height:600px;
   margin:auto;
   padding:0;
-  width:960px;
+  width:600px;
 }
 table .block {
 
