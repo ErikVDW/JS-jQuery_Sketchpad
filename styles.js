@@ -50,7 +50,7 @@ function main(){
 
   var sideLength = prompt("How many squares would you like per side on the grid?");
   if (sideLength > 30) {sideLength = 30} // Set maximum for performance reasons (900 squares total)
-  var dimension = 960/sideLength; // The width and height of each block
+  var dimension = 600/sideLength; // The width and height of each block
   var reqBlocks = Math.pow(sideLength, 2); // The number of blocks required to fill the area
   
   // Divs

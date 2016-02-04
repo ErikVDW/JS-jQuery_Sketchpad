@@ -15,24 +15,30 @@ h1 {
 }
 section {
   border: 2px solid red;
-  clear: right;
   float: left;
-  height:800px;
+  height:500px;
   padding:0;
-  width:800px;
+  width:500px;
+  margin-left: 5%;
+  margin-top: 3%;
+ 
 }
-div .block-container {
-  float:left;
-  
+div.block-container {
+  border: 2px solid white;
+  background-color: yellow;
+  height: 400px;
+  margin-top: 10%;
+  margin: auto;
+  width: 400px;
 }
-div .block {
+div.block {
   background-color:black;
   float:left;
-  height:80px;
+  height:50px;
   margin:0;
   padding:0;
   position:relative;
-  width:80px;
+  width:50px;
 }
 table {
   border: 2px solid white;
