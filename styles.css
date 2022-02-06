@@ -1,8 +1,8 @@
 body {
-  background-color:black;
+  background-color:lightgray;
   border-collapse: collapse;
   clear: both;
-  color: white;
+  color: black;
   float:left;
   width:100%;
 }
@@ -33,7 +33,7 @@ div.block-container {
   width: 400px;
 }
 div.block {
-  background-color:black;
+  background-color:lightgray;
   float:left;
   height:50px;
   margin:0;

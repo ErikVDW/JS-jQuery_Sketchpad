@@ -10,7 +10,7 @@ var TABLE_BLOCK = '<td class="block"></td>'
 function sectionAdd (reqBlocks) { // 
   var i = 0;
   while (i < reqBlocks) {
-    $('section').append(BLOCK_DIV);
+    $('div.block-container').append(BLOCK_DIV);
     i ++;
   }
 }
@@ -26,11 +26,11 @@ function tableAdd (sideLength) {
     i ++;
   }
   
-  var i = 0;
+  i = 0;
   
   while (i < sideLength) {
     console.log("Check");
-    $('tr').append(BLOCK_DIV);
+    $('tr').append(TABLE_BLOCK);
     i ++;
   }
 
@@ -49,8 +49,8 @@ function main(){
   // Determine dimensions
 
   var sideLength = prompt("How many squares would you like per side on the grid?");
-  if (sideLength > 30) {sideLength = 30} // Set maximum for performance reasons (900 squares total)
-  var dimension = 600/sideLength; // The width and height of each block
+  if (sideLength > 100) {sideLength = 100} // Set maximum for performance reasons (10,000 squares total)
+  var dimension = (400/sideLength); // The width and height of each block
   var reqBlocks = Math.pow(sideLength, 2); // The number of blocks required to fill the area
   
   // Divs
