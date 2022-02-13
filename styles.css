@@ -26,7 +26,7 @@ section {
 }
 div.block-container {
   border: 2px solid white;
-  background-color: yellow;
+  background-color: white;
   height: 400px;
   margin-top: 10%;
   margin: auto;
@@ -41,6 +41,7 @@ div.block {
   position:relative;
   width:50px;
 }
+
 table {
   border: 2px solid white;
   height: 400px;
